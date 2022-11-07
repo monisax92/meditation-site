@@ -1,0 +1,22 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto, sant-serif;
+    color: black;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    color: $secondColor;
+}
+

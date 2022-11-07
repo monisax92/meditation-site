@@ -1,0 +1,82 @@
+.row{
+    &--gutters {
+        column-gap: 5.3%;
+        /*to get rid of the padding on last div*/
+    }
+
+    &--gutters-small {
+        column-gap: 3.6%;
+    }
+
+    &--gutters-large {
+        column-gap: 8%;
+    }
+    &__b-margin-until-medium{
+        margin-bottom: 0;
+    }
+
+    &--t-padding{
+        padding-top: 80px;
+    }
+
+    &__large-1,
+    &__large-2,
+    &__large-3,
+    &__large-4,
+    &__large-5,
+    &__large-6,
+    &__large-7,
+    &__large-8,
+    &__large-9,
+    &__large-10,
+    &__large-11,
+    &__large-12{
+        grid-column: span 12;
+    }
+
+    @mixin atMedium {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        margin-bottom: 0;
+
+        &__medium-4{
+        grid-column: span 4;
+        }
+
+        &__medium-6{
+            grid-column: span 6;
+        }
+
+        &__medium-8{
+            grid-column: span 8;
+        }
+    }
+
+    @mixin atLarge {
+
+        margin-bottom: 0;
+
+        &__large-4 {
+            grid-column: span 4;
+        }
+
+        &__large-6 {
+            grid-column: span 6;
+        }
+
+        &__large-8 {
+            grid-column: span 8;
+        }
+    }
+
+    &--equal-height-at-large{
+
+        @mixin atLarge{
+            & > div{
+                display: flex;
+            }
+        }
+    }
+
+}

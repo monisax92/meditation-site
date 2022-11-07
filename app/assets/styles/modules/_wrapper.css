@@ -1,0 +1,37 @@
+.wrapper{
+    overflow: hidden;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    max-width: 77.25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--medium{
+        max-width: 61rem;
+    }
+
+    &--b-margin{
+
+        margin-bottom: 1rem;
+
+        @mixin atSmall{
+           margin-bottom: 3.875rem; 
+        } 
+    }
+
+    &--no-padding-until-large{
+        padding-left: 0;
+        padding-right: 0;
+
+        @mixin atLarge {
+            padding-left: 1.125rem;
+            padding-right: 1.125rem;
+        }
+    }
+
+    /*any wrapper inside another wrapper*/
+    .wrapper{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
